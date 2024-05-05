@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ post.title }} - Flask Blog{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-header bg-dark text-white boxes">
+                    <h2 class="card-title">{{ post.title }}</h2>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{ post.content }}</p>
+                </div>
+                <div class="card-footer text-muted boxes">
+                    <p class="mb-0 navbar">Author: {{ post.author }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
